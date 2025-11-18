@@ -40,3 +40,9 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: view
+    stg:
+      +materialized: table
+    mart:
+      +materialized: table
+    rpt:
+      +materialized: view

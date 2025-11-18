@@ -1,0 +1,13 @@
+version: 2
+sources:
+   - name: src
+     database: studious-bit-400118
+     schema: input_schema
+     tables:
+         - name: customers
+         - name: products
+   - name: trans
+     database: studious-bit-400118
+     schema: trans_schema
+     tables:
+         - name: orders

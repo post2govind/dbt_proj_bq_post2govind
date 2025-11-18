@@ -5,6 +5,10 @@ sources:
      schema: input_schema
      tables:
          - name: customers
+           columns:
+             - name: CUSTOMERID
+               tests:
+                - unique
          - name: products
    - name: trans
      database: studious-bit-400118

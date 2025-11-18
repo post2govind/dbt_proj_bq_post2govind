@@ -1,0 +1,24 @@
+version:  2
+models:
+  - name: stg_customers
+    columns:
+      - name: CUSTOMERID
+        tests:
+          - unique
+          - not_null
+      - name: CUSTOMERNAME
+        tests:
+          - not_null
+  - name: stg_products
+    columns:
+      - name: CATEGORY
+        tests: 
+          - accepted_values:
+              values: ['Furniture', 'Office']
+          - not_null
+  - name: stg_orders
+    columns:
+      - name: customerid|| '-' || productid || '-' || orderid
+        tests: 	
+          - unique
+        

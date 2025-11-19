@@ -1,8 +1,10 @@
 version:  2
 models:
   - name: stg_customers
+    description: This is Stage model for customers after cleansing. By Govind.K 2025Nov19.
     columns:
       - name: CUSTOMERID
+        description: This customer ID column is a prrimary key column.
         tests:
           - unique
           - not_null
@@ -21,4 +23,5 @@ models:
       - name: customerid|| '-' || productid || '-' || orderid
         tests: 	
           - unique
-        
+      - name: shipmode
+        description: '{{ doc("shipmode")}}'        

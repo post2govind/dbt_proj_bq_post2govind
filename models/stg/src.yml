@@ -5,6 +5,7 @@ sources:
      schema: input_schema
      tables:
          - name: customers
+           description: '{{ doc("testmd")}}'
            columns:
              - name: CUSTOMERID
                tests:
